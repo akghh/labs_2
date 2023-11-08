@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[legalpaper, margin=1cm, top=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+\begin{document}
+
+\setlength{\headsep}{0.8cm}
+\markright{\textit{Гл. 2 Предел и непрерывность}}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\fontsize{14pt}{12pt}\selectfont250}
+\fancyhead[C]{\fontsize{14pt}{skip}\selectfont\itshape\rightmark}
+
+\fontsize{18pt}{18pt}
+\selectfont
+\setlength{\parindent}{0.8cm}
+{
+ \noindentфункция $y = \sqrt{x}$ равномерно непрерывна на $(0; +\infty)$.\\
+ \indent2) Пусть $\delta > 0, x', x'' \in (0; +\infty), \mid x' - x''\mid \leq \delta$. Очевидно,\\
+ $$\small\ \mid \sin\frac{1}{x'} - \sin\frac{1}{x''} \leq 2, x', x'' \in (0; +\infty), $$
+ значит\, и $\omega(\delta) \leq 2.$ \\
+ \par Рассмотрим точки $x'_n=\frac{1}{-(\pi/2) + 2\pi n}$ и $x''_n=\frac{1}{(\pi/2) + 2\pi n}$, где\linebreak
+ $\sin(1/x)$ равен соответственно —1 и 1. Поскольку\\
+ $$\small\lim\limits_{n\;\to\;\infty} x'_n = \small\lim\limits_{n\;\to\;\infty} x''_n = 0$$
+ найдется такое $n \in N,$ что $0 < x'_n < \delta, 0 < x''_n < \delta.$ Тогда $\mid x'_n - x''_n \mid <$\linebreak
+ $< \delta,$ а
+ $$\small\ \mid \sin\frac{1}{x'} - \sin\frac{1}{x''}\mid = 2$$
+Значит, $\omega(\delta) = 2$ для любого $\delta > 0.$ Отсюда следует, что\\
+$$\small\lim\limits_{\delta\;\to\;+0} \omega(\delta) = 2 \neq 0,$$
+и поэтому функция $y = \sin(1/x)$ не является равномерно непрерывной\linebreak
+на $(0; +\infty).$\\
+\indent3) Пусть $\delta > 0, x' > 0, x'' = x' + \delta;$ тогда\\
+$$\frac{1}{\sqrt{x'}}-\frac{1}{\sqrt{x''}} = \frac{1}{\sqrt{x'}} - \frac{1}{\sqrt{x' + \delta}}$$
+Так как
+$$\small\lim\limits_{x'\;\to\;+0} \frac{1}{\sqrt{x'}} = +\infty, \small\lim\limits_{x'\;\to\;+0} \frac{1}{\sqrt{x' + \delta}} = +\infty,$$
+то $$\small\lim\limits_{x'\;\to\;+0} (\frac{1}{\sqrt{x'}} - \frac{1}{\sqrt{x' +\delta}}) = +\infty.$$
+Следовательно, $$\small\sup\limits_{x'>0} (\frac{1}{\sqrt{x'}} - \frac{1}{\sqrt{x' +\delta}}) = +\infty,$$
+а поскольку $$\omega(\delta) \leq \small\sup\limits_{x'>0} (\frac{1}{\sqrt{x'}} - \frac{1}{\sqrt{x' +\delta}}), $$
+ то и $\omega(\delta) = +\infty$для любого $\delta > 0$. Отсюда следует, что функ-\linebreak
+ ция $1/\sqrt{x}$ не является равномерно непрерывной на$ (0; +\infty).\bigtriangleup$ \\
+ \parЗАДАЧИ\linebreak
+ \par \textbf{1.}Доказать, что функция f равномерно непрерывна на множест-\linebreak
+ве X, если:\\
+\indent$1) f(x) = 2x - 1, X = R;$ $2) f(x) = x^2, X = (-1;1);$\\
+\indent$3) f(x) = \sqrt[3]{x}, X = [ 0;2]; 4) f(x) = \sin x^2, X = (-3;3];$ \\
+\indent$5) f(x) = x\sin(1/x), X = (0; \pi];$\\
+ \newpage
+ \setlength{\headsep}{0.8cm}
+\markright{\textit{\S 12. Равномерная непрерывность функции}}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[R]{\fontsize{14pt}{12pt}\selectfont251}
+\fancyhead[C]{\fontsize{14pt}{skip}\selectfont\itshape\rightmark}
+
+\fontsize{18pt}{18pt}
+\selectfont
+\setlength{\parindent}{0.8cm}
+\par \textbf{2.}Доказать, что функция не является равномерно непрерывной\linebreak
+на множестве X:\\
+\indent$1) y = \cos(1/x), X = (0;1);$ $2) y = \sin x^2, X = R;$\\
+\indent$3) y = x^3, X = R; 4) y = ln x, X = (0;1);$ \\
+\par Исследовать функцию на равномерную непрерывность на мно-\linebreak
+жестве X (3;4).\\
+\par \textbf{3.} $1) y = e^{-arcsin x}$\\
+\indent$2) y = arctg (\frac{ln(1+x)}{\sqrt{x^2 + 1} + \mid \sin x \mid}), X = [0;10];$ $3) y = \sqrt[3]{x}, X = R;$\\
+\indent$4) y = e^x, X = R; 5) y = ctg x, X = (0;1);$ \\
+\indent$6) y = \frac{x^6 - 1}{\sqrt{1-x^4}}, X = (-1;1); 7) y = \sin \sqrt{x} X = [1;+\infty);$ \\
+\indent$8) y =
+  \begin{cases}
+    1-x^2,       & \quad -1 \leq x \leq 0,\\
+    1+x,  & \quad 0 \leq x \leq 1,
+  \end{cases} X = [-1; 1];$\\
+ \indent$ 9) y = x \sin (1/x), X = R;$\\
+\par \textbf{4.} $1) y =
+  \begin{cases}
+    x+1,       & \quad x \leq 0,\\
+    e^{-x},  & \quad x > 0,
+  \end{cases} X = R;$\\
+\indent$2) y = \cos x \cos{\frac{\pi}{x}}, X = (0;1); 3) y = \frac{\sin{x}}{x}, X = R;$ \\
+\indent$4) y = x + \sin{x}, X = R; 5) y = x \cos{x}, X = R;$ \\
+\indent$6) y = \sin(1/x), X = [0,01; +\infty);$\\
+\indent$7) y = n^2$ при $2n \leq x \leq 2n + 1, n \in N, X$ -- это объединение всех\linebreak
+отрезков $ [2n; 2n+1], n \in N;$\\
+\indent$8) y = \frac{\mid \sin{x} \mid}{x}, X = (-\pi; 0) \cup (0;\pi);$\\
+
+\par \textbf{5.}Функция f удовлетворяет на множестве X следующему усло-\linebreak
+вию: существуют числа $k > 0$ и $\alpha > 0$ такие, что для любых $x_1$ и  $x_2$\linebreak
+из X верно неравенство
+$$\mid f(x_1) - f(x_2)\mid \leq k\mid x_1 - x_2\mid ^{\alpha}$$
+(при $\alpha = 1$ это условие называют \textit{условием Липшица}, при $\alpha = 1$ --\\
+\textit{условием Гельдера порядка $\alpha$}). Доказать, что функция, удовлетво-\linebreak
+ряющая этому условию, равномерно непрерывна на множестве X.\linebreak
+\par \textbf{6.} Доказать, что если функция равномерно непрерывна на проме-\linebreak
+жутке, то она и непрерывна на этом промежутке.\\
+\par \textbf{7.} Доказать, что если функция неограниченна на ограниченном\linebreak
+интервале, то она не является равномерно непрерывной на этом ин-\linebreak
+тервале.\\
+\par \textbf{8.} Привести пример функции:\\
+\par 1) ограниченной и непрерывной на ограниченном интервале, но не\linebreak
+являющейся равномерно непрерывной на нем;
+\par 2) непрерывной на замкнутом (см. задачу 94, $\S 10$) множестве и\\
+\end{document}
