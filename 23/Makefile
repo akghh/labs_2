@@ -1,13 +1,17 @@
 CC = gcc
 CFLAGS = -std=c99 -Wall -Werror
+DEBUG = gdb
+FILEOUT = tree.out
+SOURCES = tree.c main.c
 
-all: main
-
-main: main.o tree.o
-	$(CC) $(CFLAGS) -o main main.o tree.o
-main.o: main.c tree.h
-	$(CC) $(CFLAGS) -c main.c
-tree.o: tree.c tree.h
-	$(CC) $(CFLAGS) -c tree.c
+all:
+	$(CC) $(CFLAGS) $(SOURCES)  -o $(FILEOUT)
 clean:
-	rm -f main *.o
+	rm -f *.out
+debug:
+	$(CC) $(CFLAGS) -g $(SOURCES)
+	sudo $(DEBUG) $(FILEOUT)
+cmp:
+	$(CC) $(CFLAGS) $(SOURCES) -o $(FILEOUT)
+run:
+	./$(FILEOUT)
