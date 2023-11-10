@@ -1,13 +1,17 @@
 CC = gcc
 CFLAGS = -std=c99 -Wall -Werror
+DEBUG = gdb
+FILEOUT = queue.out
+SOURCES = queue.c main.c
 
-all: main
-
-main: main.o queue.o
-	$(CC) $(CFLAGS) -o main main.o queue.o
-main.o: main.c queue.h
-	$(CC) $(CFLAGS) -c main.c
-queue.o: queue.c queue.h
-	$(CC) $(CFLAGS) -c queue.c
+all:
+	$(CC) $(CFLAGS) $(SOURCES)  -o $(FILEOUT)
 clean:
-	rm -f main *.o
+	rm -f *.out
+debug:
+	$(CC) $(CFLAGS) -g $(SOURCES)
+	sudo $(DEBUG) $(FILEOUT)
+cmp:
+	$(CC) $(CFLAGS) $(SOURCES) -o $(FILEOUT)
+run:
+	./$(FILEOUT)
