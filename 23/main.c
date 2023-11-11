@@ -28,7 +28,7 @@ int main() {
                 break;
             case 2:
                 if (root == NULL) {
-                    printf("Дерево итак пустое\n");
+                    printf("Дерево и так пустое\n");
                     break;
                 }
                 printf("Введите значение элемента для удаления: ");
