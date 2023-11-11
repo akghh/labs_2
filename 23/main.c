@@ -22,28 +22,40 @@ int main() {
         switch (choice) {
             case 1:
                 printf("Введите значение элемента: ");
-        		    scanf("%d", &value);
-       	 		    root = insert_node(root, value);
+        		scanf("%d", &value);
+       	 	    root = insert_node(root, value);
                 printf("Вершина добавлена\n");
                 break;
             case 2:
+                if (root == NULL) {
+                    printf("Дерево итак пустое\n");
+                    break;
+                }
                 printf("Введите значение элемента для удаления: ");
-        		    scanf("%d", &value);
-        		    root = remove_node(root, value);
+        	    scanf("%d", &value);
+        	    root = remove_node(root, value);
                 printf("Вершина удалена\n");
                 break;
             case 3:
-    			      printf("\n\n");
-    			      print_tree(root, 1);
-    			      printf("\n\n");
+                if (root == NULL) {
+                    printf("~Пустое дерево~\n");
+                    break;
+                }
+    		    printf("\n\n");
+    		    print_tree(root, 1);
+    		    printf("\n\n");
                 break;
             case 4:
+                if (root == NULL) {
+                    printf("Дерево пустое. Создайте дерево\n");
+                    break;
+                }
                 printf("Введите границы диапазона: ");
-        		    scanf("%d%d", &min, &max);
+        	    scanf("%d%d", &min, &max);
                 if (is_leaf_in_range(root, min, max)) {
-        			    printf("Да.\n");
-    			      } else {
-                  printf("Нет.\n");
+        		    printf("Да.\n");
+    		    } else {
+                    printf("Нет.\n");
     			      }
                 break;
             case 5:
