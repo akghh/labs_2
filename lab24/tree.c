@@ -263,9 +263,9 @@ void print_inf(Node* n) {
         return;
     }
 
-    if (n->type == OPERATOR) {
+    /*if (n->type == OPERATOR) {
         printf("(");
-    }
+    }*/
 
     print_inf(n->l);
 
@@ -290,9 +290,9 @@ void print_inf(Node* n) {
 
     print_inf(n->r);
 
-    if (n->type == OPERATOR) {
+    /*if (n->type == OPERATOR) {
         printf(")");
-    }
+    }*/
 }
 
 void print_tree_new(tree* t) {
