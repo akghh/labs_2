@@ -53,7 +53,7 @@ void push_queue(queue* q, Node* a) {
     q->front = a;
 }
 
-Node* pop_stack(stack* n) { //удаление и взятие вершины стека
+Node* pop_stack(stack* n) {
     Node* t = n->head;
     if (n->head == NULL)
         return NULL;
@@ -149,9 +149,8 @@ void from_st_to_q(stack* st, queue* q, Node* n) {
         }
     }
     else if (n->type == OPERATOR) {
-        printf("\n");
         Node* tmp = pop_stack(st);
-        while (tmp != NULL && n->rang <= tmp->rang) {
+        while (tmp != NULL && tmp->rang <= n->rang) {
             printf("Переместили %c в очередь\n", tmp->data.operation);
             push_queue(q, tmp);
             tmp = pop_stack(st);
